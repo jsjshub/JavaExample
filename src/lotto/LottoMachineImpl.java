@@ -1,28 +1,31 @@
 package lotto;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 public class LottoMachineImpl implements LottoMachine {
 
-    private Integer[] balls = new Integer[45];
+    private int Max = 45;
+    private int result = 6;
+    private List<Integer> arr = new ArrayList<>();
 
     @Override
     public void setupBalls() {
-        for (int i = 0; i < balls.length; i++) {
-            balls[i] = i + 1;
+        for (int i = 0; i < Max; i++) {
+            arr.add(i + 1);
         }
     }
 
     @Override
     public void getBalls() {
+        Collections.shuffle(arr);
+        for (int i = 0; i < result; i++) {
+            System.out.println(arr.get(i));
+        }
 
-        Arrays.stream(balls).iterator().forEachRemaining(data -> System.out.println(data));
     }
 
-    public void resultBalls(){
-
+    public void resultBalls() {
+        setupBalls();
+        getBalls();
     }
 }
