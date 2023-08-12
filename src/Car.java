@@ -1,10 +1,9 @@
 public class Car {
-    public void run() {
-        System.out.println("달리는중");
+    public Car() {
+        System.out.println("모든 자동차에 포함 됨");
     }
 
-    @Override
-    public String toString() {
-        return "자동차";
+    public void runCar() {
+        System.out.println("자동차 달리는 중");
     }
 }
