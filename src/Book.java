@@ -8,4 +8,8 @@ public class Book {
     public void setPrice(int price) {
         this.price = price;
     }
+
+    public void testCode() {
+        System.out.println("TEST");
+    }
 }

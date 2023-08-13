@@ -3,6 +3,7 @@ public class BookExample {
         Book book = new Book();
         book.setPrice(1000);
 
+
         System.out.println(book.getPrice());
     }
 }
